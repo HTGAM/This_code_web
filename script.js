@@ -41,3 +41,6 @@ document.querySelectorAll('section > div').forEach((el) => {
     // Note: Handling opacity in CSS/Tailwind classes for specific elements is better to avoid layout shift issues if JS fails
     // For now, we rely on the specific animated elements in HTML
 });
+
+// Active Link Highlight on Scroll
+
