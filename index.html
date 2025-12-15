@@ -121,8 +121,8 @@
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse group">
                 <span
-                    class="self-center text-2xl font-bold whitespace-nowrap font-mono group-hover:text-brand-neon transition-colors">This_Code<span
-                        class="text-brand-purple">;</span></span>
+                    class="self-center text-2xl font-bold whitespace-nowrap font-mono group-hover:text-brand-neon transition-colors text-neon-cyan">This_Code<span
+                        class="text-brand-purple text-neon-purple">;</span></span>
             </a>
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCWSFV61qje3LqBoC4dXtnD6Q8S_HokLYswOT_qqJaQh_wlw/viewform?usp=header"
@@ -168,6 +168,7 @@
     <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
         <!-- Background Effects -->
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <canvas id="hero-canvas" class="absolute inset-0 w-full h-full z-0"></canvas>
             <div
                 class="absolute top-0 left-1/4 w-96 h-96 bg-brand-purple/30 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob">
             </div>
@@ -187,12 +188,13 @@
         <div class="container mx-auto px-4 text-center z-10">
             <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-brand-neon/30 bg-brand-neon/10 text-brand-neon text-sm font-mono animate-fade-in-up"
                 style="animation-delay: 0.1s;">
-                &lt;Hello World /&gt;
+                <span class="typewriter inline-block align-bottom">&lt;Hello World /&gt;</span>
             </div>
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 animate-fade-in-up"
                 style="animation-delay: 0.2s;">
                 We Code <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-purple">Future</span>
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-purple glitch"
+                    data-text="Future">Future</span>
             </h1>
             <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 animate-fade-in-up break-keep"
                 style="animation-delay: 0.3s;">
@@ -230,7 +232,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Card 1 -->
                 <div
-                    class="group p-8 rounded-2xl bg-dark-surface border border-white/5 hover:border-brand-neon/50 transition-all duration-300 hover:-translate-y-2">
+                    class="group p-8 rounded-2xl bg-dark-surface border border-white/5 hover:border-brand-neon/50 transition-all duration-300 hover:-translate-y-2 hover-glow-neon">
                     <div
                         class="w-12 h-12 bg-brand-neon/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-neon/20 transition-colors">
                         <i data-lucide="code-2" class="text-brand-neon w-6 h-6"></i>
@@ -240,7 +242,7 @@
                 </div>
                 <!-- Card 2 -->
                 <div
-                    class="group p-8 rounded-2xl bg-dark-surface border border-white/5 hover:border-brand-purple/50 transition-all duration-300 hover:-translate-y-2">
+                    class="group p-8 rounded-2xl bg-dark-surface border border-white/5 hover:border-brand-purple/50 transition-all duration-300 hover:-translate-y-2 hover-glow-purple">
                     <div
                         class="w-12 h-12 bg-brand-purple/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-purple/20 transition-colors">
                         <i data-lucide="users" class="text-brand-purple w-6 h-6"></i>
@@ -250,7 +252,7 @@
                 </div>
                 <!-- Card 3 -->
                 <div
-                    class="group p-8 rounded-2xl bg-dark-surface border border-white/5 hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-2">
+                    class="group p-8 rounded-2xl bg-dark-surface border border-white/5 hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-2 hover-glow-sky">
                     <div
                         class="w-12 h-12 bg-brand-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-500/20 transition-colors">
                         <i data-lucide="trophy" class="text-brand-500 w-6 h-6"></i>
