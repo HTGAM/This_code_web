@@ -225,44 +225,60 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-dark-bg relative">
-        <div class="container mx-auto px-4">
+    <section id="about" class="py-24 bg-dark-bg relative overflow-hidden">
+        <!-- Soft Ambient Background -->
+        <div
+            class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black via-brand-purple/5 to-black pointer-events-none">
+        </div>
+        <div
+            class="absolute -top-40 -right-40 w-96 h-96 bg-brand-neon/10 rounded-full blur-3xl opacity-30 animate-pulse">
+        </div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-brand-purple/10 rounded-full blur-3xl opacity-30 animate-pulse"
+            style="animation-delay: 2s;"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4"><span class="text-brand-neon">About</span> Us</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto break-keep">우리는 단순한 코딩 동아리가 아닙니다.<br class="block" /> 기술로 세상을
-                    변화시키는 크리에이터들의 모임입니다.</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-mono tracking-tight">
+                    <span class="text-white">About</span> <span class="text-gradient-soft">Us</span>
+                </h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-violet-400 to-cyan-400 mx-auto mb-8 rounded-full opacity-80">
+                </div>
+                <p class="text-gray-100 max-w-2xl mx-auto leading-relaxed text-lg font-light break-keep">
+                    우리는 코드가 <span class="text-purple-300 font-medium">예술</span>이 되는 순간을 믿습니다.<br>
+                    단순한 기술 습득을 넘어, 함께 꿈꾸고 <span class="text-cyan-300 font-medium">창조</span>하는 공간입니다.
+                </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div
-                    class="group p-8 rounded-2xl bg-dark-surface border border-white/5 hover:border-brand-neon/50 transition-all duration-300 hover:-translate-y-2 hover-glow-neon">
-                    <div
-                        class="w-12 h-12 bg-brand-neon/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-neon/20 transition-colors">
-                        <i data-lucide="code-2" class="text-brand-neon w-6 h-6"></i>
+                <div class="glass-card p-8 group">
+                    <div class="icon-box-soft w-16 h-16 mb-6 text-cyan-300 border border-white/5">
+                        <i data-lucide="sparkles" class="w-8 h-8"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Study & Dev</h3>
-                    <p class="text-gray-400">웹, 앱, AI 등 다양한 분야의 스터디를 진행하고 실제 프로젝트를 개발합니다.</p>
+                    <h3 class="text-xl font-bold mb-3 text-white">Create & Inspire</h3>
+                    <p class="text-gray-200 text-sm leading-7 break-keep">
+                        웹, 앱, AI 등 다양한 기술로 상상하던 아이디어를 <span class="text-cyan-200">현실로 구현</span>합니다.
+                    </p>
                 </div>
                 <!-- Card 2 -->
-                <div
-                    class="group p-8 rounded-2xl bg-dark-surface border border-white/5 hover:border-brand-purple/50 transition-all duration-300 hover:-translate-y-2 hover-glow-purple">
-                    <div
-                        class="w-12 h-12 bg-brand-purple/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-purple/20 transition-colors">
-                        <i data-lucide="users" class="text-brand-purple w-6 h-6"></i>
+                <div class="glass-card p-8 group">
+                    <div class="icon-box-soft w-16 h-16 mb-6 text-violet-300 border border-white/5">
+                        <i data-lucide="heart-handshake" class="w-8 h-8"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Networking</h3>
-                    <p class="text-gray-400">선후배 간의 멘토링과 다양한 네트워킹 행사를 통해 함께 성장합니다.</p>
+                    <h3 class="text-xl font-bold mb-3 text-white">Connect Deeply</h3>
+                    <p class="text-gray-200 text-sm leading-7 break-keep">
+                        따뜻한 멘토링과 네트워킹으로 서로에게 <span class="text-violet-200">가장 든든한 동료</span>가 되어줍니다.
+                    </p>
                 </div>
                 <!-- Card 3 -->
-                <div
-                    class="group p-8 rounded-2xl bg-dark-surface border border-white/5 hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-2 hover-glow-sky">
-                    <div
-                        class="w-12 h-12 bg-brand-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-500/20 transition-colors">
-                        <i data-lucide="trophy" class="text-brand-500 w-6 h-6"></i>
+                <div class="glass-card p-8 group">
+                    <div class="icon-box-soft w-16 h-16 mb-6 text-yellow-200 border border-white/5">
+                        <i data-lucide="star" class="w-8 h-8"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Hackathons</h3>
-                    <p class="text-gray-400">교내외 해커톤에 참가하여 실전 경험을 쌓고 수상에 도전합니다.</p>
+                    <h3 class="text-xl font-bold mb-3 text-white">Shine Together</h3>
+                    <p class="text-gray-200 text-sm leading-7 break-keep">
+                        해커톤과 공모전 무대에서 우리의 열정을 <span class="text-yellow-100">빛나는 결과</span>로 증명합니다.
+                    </p>
                 </div>
             </div>
         </div>
@@ -321,8 +337,10 @@
                             <h3
                                 class="text-2xl font-bold text-white mb-3 group-hover:text-brand-neon transition-colors">
                                 2025 This_code 설립</h3>
-                            <p class="text-gray-400 leading-relaxed">"코딩으로 상상을 현실로"라는 비전 아래<br>열정 있는 24명의 멤버들과 함께 <br>2025년 여정을
-                                시작했습니다.</p>
+                            <p class="text-gray-400 leading-relaxed">"코딩으로 상상을 현실로"라는 비전 아래<br>열정 있는 24명의 멤버들과 함께
+                                <br>2025년 여정을
+                                시작했습니다.
+                            </p>
                         </div>
                     </div>
                     <!-- Empty Space (Right)-->
@@ -357,7 +375,8 @@
                             <h3
                                 class="text-2xl font-bold text-white mb-3 group-hover:text-brand-purple transition-colors">
                                 설화고 정보 코딩 한마당</h3>
-                            <p class="text-gray-400 leading-relaxed">2일간 펼쳐진 뜨거운 열정의 현장!<br>온라인 접속을 통해 개별적으로 <br>프로그래밍 문제 해결</p>
+                            <p class="text-gray-400 leading-relaxed">2일간 펼쳐진 뜨거운 열정의 현장!<br>온라인 접속을 통해 개별적으로 <br>프로그래밍
+                                문제 해결</p>
                         </div>
                     </div>
                 </div>
@@ -381,7 +400,8 @@
                             </span>
                             <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-brand-500 transition-colors">
                                 연말 프로젝트 전시회</h3>
-                            <p class="text-gray-400 leading-relaxed">한 해 동안의 결실을 맺는 시간.<br>웹, 앱, AI, 게임 등 다양한 분야의 프로젝트를 교내에
+                            <p class="text-gray-400 leading-relaxed">한 해 동안의 결실을 맺는 시간.<br>웹, 앱, AI, 게임 등 다양한 분야의 프로젝트를
+                                교내에
                                 전시했습니다.</p>
                         </div>
                     </div>
@@ -437,20 +457,20 @@
                 <p class="text-gray-400">우리의 열정이 담긴 활동들을 확인해보세요.</p>
             </div>
 
-            <!-- Masonry Grid Placeholder -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[200px]">
-                <!-- Item 1 (Large) -->
-                <div class="lg:col-span-2 lg:row-span-2 relative group overflow-hidden rounded-xl bg-gray-800">
+            <!-- 4-Frame Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Item 1 -->
+                <div class="relative group overflow-hidden rounded-xl bg-gray-800 h-[300px]">
                     <img src="images/zombie.png" alt="Coding"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-60 group-hover:opacity-100">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <span class="text-brand-neon font-mono text-sm mb-2">Project</span>
-                        <h3 class="text-2xl font-bold">2025 Portfolio</h3>
+                        <h3 class="text-xl font-bold">2025 Portfolio</h3>
                     </div>
                 </div>
                 <!-- Item 2 -->
-                <div class="relative group overflow-hidden rounded-xl bg-gray-800">
+                <div class="relative group overflow-hidden rounded-xl bg-gray-800 h-[300px]">
                     <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1000&auto=format&fit=crop"
                         alt="Meeting"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-60 group-hover:opacity-100">
@@ -461,7 +481,7 @@
                     </div>
                 </div>
                 <!-- Item 3 -->
-                <div class="relative group overflow-hidden rounded-xl bg-gray-800">
+                <div class="relative group overflow-hidden rounded-xl bg-gray-800 h-[300px]">
                     <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop"
                         alt="Code"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-60 group-hover:opacity-100">
@@ -471,8 +491,8 @@
                         <h3 class="text-xl font-bold">Web Project</h3>
                     </div>
                 </div>
-                <!-- Item 4 (Wide) -->
-                <div class="lg:col-span-2 relative group overflow-hidden rounded-xl bg-gray-800">
+                <!-- Item 4 -->
+                <div class="relative group overflow-hidden rounded-xl bg-gray-800 h-[300px]">
                     <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop"
                         alt="Team"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-60 group-hover:opacity-100">

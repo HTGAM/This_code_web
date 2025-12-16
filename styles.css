@@ -189,3 +189,75 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
+
+/* --- Dreamy Glass Utilities --- */
+
+/* Soft Gradient Text */
+.text-gradient-soft {
+    background: linear-gradient(to right, #a78bfa, #2dd4bf);
+    /* Violet to Teal (Pastel) */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Dreamy Glass Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    /* More visible background */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    /* Much stronger border */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow */
+    border-radius: 24px;
+    transition: all 0.4s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect: Lift & Inner Glow */
+.glass-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.2),
+        inset 0 0 20px rgba(167, 139, 250, 0.1);
+    /* Inner violet glow */
+}
+
+/* Floating Gradient Orb behind card content (Optional) */
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(167, 139, 250, 0.1) 0%, transparent 70%);
+    transform: scale(0.8);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.glass-card:hover::before {
+    opacity: 1;
+}
+
+/* Soft Icon Background */
+.icon-box-soft {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover .icon-box-soft {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.1) rotate(5deg);
+}
